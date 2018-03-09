@@ -38,17 +38,17 @@ RSpec.describe LoremHelper::Lorem do
 
   it 'generates a single sentence' do
     # Default sentence is 4 - 10 words
-    expect(LoremHelper::Lorem.sentence).to match(/^[A-Z][a-z]+( [a-z]+){3,9}\.$/)
+    expect(LoremHelper::Lorem.sentence).to match(/^[A-Z][a-z]*( [a-z]+){3,9}\.$/)
   end
 
   it 'generates a single sentence with custom word count' do
     # Specify 12 words (plus 0-6 default random)
-    expect(LoremHelper::Lorem.sentence(12)).to match(/^[A-Z][a-z]+( [a-z]+){11,17}\.$/)
+    expect(LoremHelper::Lorem.sentence(12)).to match(/^[A-Z][a-z]*( [a-z]+){11,17}\.$/)
   end
 
   it 'generates a single sentence with custom word count and custom random' do
     # Specify 12 words (plus 0 random)
-    expect(LoremHelper::Lorem.sentence(12, false, 0)).to match(/^[A-Z][a-z]+( [a-z]+){11}\.$/)
+    expect(LoremHelper::Lorem.sentence(12, false, 0)).to match(/^[A-Z][a-z]*( [a-z]+){11}\.$/)
   end
 
   it 'generates multiple sentences' do
@@ -56,24 +56,24 @@ RSpec.describe LoremHelper::Lorem do
     expect(sentences).to be_an Array
     expect(sentences.size).to eq 3
     sentences.each do |sentence|
-      expect(sentence).to match(/^[A-Z][a-z]+( [a-z]+){2,8}\.$/)
+      expect(sentence).to match(/^[A-Z][a-z]*( [a-z]+){2,8}\.$/)
     end
   end
 
   it 'generates a single paragraph' do
     # Default sentence is 3 - 9 words
     # Default paragraph is 3 - 6 sentences
-    expect(LoremHelper::Lorem.paragraph).to match(/^([A-Z][a-z]+( [a-z]+){2,8}\. ?){3,6}$/)
+    expect(LoremHelper::Lorem.paragraph).to match(/^([A-Z][a-z]*( [a-z]+){2,8}\. ?){3,6}$/)
   end
 
   it 'generates a single paragraph with custom sentence count' do
     # Specify 12 words (plus 0-6 default random)
-    expect(LoremHelper::Lorem.paragraph(12)).to match(/^([A-Z][a-z]+( [a-z]+){2,8}\. ?){11,17}$/)
+    expect(LoremHelper::Lorem.paragraph(12)).to match(/^([A-Z][a-z]*( [a-z]+){2,8}\. ?){11,17}$/)
   end
 
   it 'generates a single paragraph with custom sentence count and custom random' do
     # Specify 12 words (plus 0 random)
-    expect(LoremHelper::Lorem.paragraph(12, false, 0)).to match(/^([A-Z][a-z]+( [a-z]+){2,8}\. ?){12}$/)
+    expect(LoremHelper::Lorem.paragraph(12, false, 0)).to match(/^([A-Z][a-z]*( [a-z]+){2,8}\. ?){12}$/)
   end
 
   it 'generates multiple paragraphs' do
@@ -84,23 +84,23 @@ RSpec.describe LoremHelper::Lorem do
     expect(paragraphs).to be_an Array
     expect(paragraphs.size).to eq 5
     paragraphs.each do |paragraph|
-      expect(paragraph).to match(/^([A-Z][a-z]+( [a-z]+){2,8}\. ?){3,6}$/)
+      expect(paragraph).to match(/^([A-Z][a-z]*( [a-z]+){2,8}\. ?){3,6}$/)
     end
   end
 
   it 'generates a single question' do
     # Default sentence is 4 - 10 words
-    expect(LoremHelper::Lorem.question).to match(/^[A-Z][a-z]+( [a-z]+){3,9}\?$/)
+    expect(LoremHelper::Lorem.question).to match(/^[A-Z][a-z]*( [a-z]+){3,9}\?$/)
   end
 
   it 'generates a single question with custom word count' do
     # Specify 12 words (plus 0-6 default random)
-    expect(LoremHelper::Lorem.question(12)).to match(/^[A-Z][a-z]+( [a-z]+){11,17}\?$/)
+    expect(LoremHelper::Lorem.question(12)).to match(/^[A-Z][a-z]*( [a-z]+){11,17}\?$/)
   end
 
   it 'generates a single sentence with custom word count and custom random' do
     # Specify 12 words (plus 0 random)
-    expect(LoremHelper::Lorem.question(12, false, 0)).to match(/^[A-Z][a-z]+( [a-z]+){11}\?$/)
+    expect(LoremHelper::Lorem.question(12, false, 0)).to match(/^[A-Z][a-z]*( [a-z]+){11}\?$/)
   end
 
   it 'generates multiple questions' do
@@ -108,7 +108,7 @@ RSpec.describe LoremHelper::Lorem do
     expect(questions).to be_an Array
     expect(questions.size).to eq 3
     questions.each do |question|
-      expect(question).to match(/^[A-Z][a-z]+( [a-z]+){2,8}\?$/)
+      expect(question).to match(/^[A-Z][a-z]*( [a-z]+){2,8}\?$/)
     end
   end
 
