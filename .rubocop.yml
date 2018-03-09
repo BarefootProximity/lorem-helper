@@ -19,7 +19,7 @@ Metrics/LineLength:
   Max: 150
 
   Exclude:
-    - spec/static_helper_spec.rb
+    - spec/static_spec.rb
 
 Metrics/MethodLength:
   Max: 15
