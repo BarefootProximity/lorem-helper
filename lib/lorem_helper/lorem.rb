@@ -2,7 +2,7 @@
 
 # This class simply exposes several methods from Faker into a Helper available in views to return sample strings
 module LoremHelper
-  class LoremHelper < Faker::Lorem
+  class Lorem < Faker::Lorem
     class << self
       def image(size = '300x300', format = 'png', background_color = nil, text_color = nil, text = nil)
         Faker::Placeholdit.image(size, format, background_color, text_color, text)

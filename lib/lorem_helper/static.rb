@@ -2,7 +2,7 @@
 
 # This class simply exposes several methods from Faker into a Helper available in views to return sample strings
 module LoremHelper
-  class StaticHelper < LoremHelper
+  class Static < Lorem
     class << self
       def word
         'lorem'
