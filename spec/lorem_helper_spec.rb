@@ -138,7 +138,6 @@ RSpec.describe LoremHelper::Lorem do
   end
 
   it 'generates a valid title with custom word count' do
-    # Default title is 2 words
     expect(LoremHelper::Lorem.title(12)).to match(/^[A-Z][a-z]*( [A-Z][a-z]*){11}$/)
   end
 
