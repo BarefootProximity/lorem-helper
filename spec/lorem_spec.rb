@@ -1,11 +1,5 @@
 # frozen_string_literal: true
 
-RSpec.describe LoremHelper do
-  it 'has a version number' do
-    expect(LoremHelper::VERSION).not_to be nil
-  end
-end
-
 RSpec.describe LoremHelper::Lorem do
   it 'generates a single word' do
     expect(LoremHelper::Lorem.word).to match(/^\w+$/)
