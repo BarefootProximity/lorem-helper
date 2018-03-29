@@ -7,7 +7,7 @@ This Gem contains various helper methods for generating both semi-random and sta
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'lorem_helper'
+gem 'lorem_helper', github: 'BarefootProximity/lorem-helper'
 ```
 
 And then execute:
