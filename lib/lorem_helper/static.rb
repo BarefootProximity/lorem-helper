@@ -13,7 +13,7 @@ module LoremHelper
       end
 
       def character(start_index = 0)
-        Faker::Lorem::CHARACTERS[start_index % Faker::Lorem::CHARACTERS.size]
+        character_set[start_index % character_set.size]
       end
 
       def characters(char_count = 255)
@@ -86,6 +86,12 @@ module LoremHelper
 
       def date
         Object::Date.new(2001, 2, 3)
+      end
+
+      private
+
+      def character_set
+        '0123456789abcdefghijklmnopqrstuvwxyz'
       end
     end
   end

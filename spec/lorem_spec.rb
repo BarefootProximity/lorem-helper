@@ -111,7 +111,7 @@ RSpec.describe LoremHelper::Lorem do
   end
 
   it 'generates a valid email with custom name' do
-    expect(LoremHelper::Lorem.email('Test User')).to match(/^(test[_.]user|user[_.]test)@\w+(\.\w+)*\.[a-z]{2,63}$/)
+    expect(LoremHelper::Lorem.email('Test User')).to match(/^(testuser|usertest)@\w+(\.\w+)*\.[a-z]{2,63}$/)
   end
 
   it 'generates a valid name' do
