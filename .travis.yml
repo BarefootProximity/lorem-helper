@@ -1,5 +1,13 @@
 sudo: false
+dist: trusty
 language: ruby
 rvm:
   - 2.4.2
-before_install: gem install bundler -v 1.16.1
+addons:
+  sonarcloud:
+    organization: "barefootproximity"
+    token:
+      secure: "AGJg58hwaHfv01oTcbhp2ontd9PZ6M428/MZgvUL4G9GpfdnKB1Zu7XXvmt/nEI5z4d+Y7PIat4tcxhRUczrusxVbJdWdWUVXUoJZeYbpZEJmwyfIVGFCsnqyKh1J2HDLlEgX9uGH/w5XD+nlZhDLBCmkw/IJoRoEIWZhB5QlASZZjrvH+CnF7pJrgASRPdOpuchZrWeVB3K9XkT32+kzTB71YeM22g+PFPlPkYYQyiUxXVx7BxGb8GUzAcGuw6D4bw+0EyVVeBijQkDubZ2KwuR8ig3b/dXI+eRxqH7+Jo4LTC1pvbXtu9gC8+l9AsLufWm2tbWjaLyieIJ7cY4ya+2b2o9y+tFBI5hnolgVTSV19LDDaZrVdWTXvaVS2IrWpdTqbBVF1JU/X24kQrZCzj6m+FyPJPgT4LtdkzGkRCgPkq8p7SzYha6/y909u9h9dU+70uvpIaYI5e1KU9iqiFhudYJM3hmcwoFIoDpRoo35XbU2KCVXO4N4AkjbzxPHXIVy4JAzz3YAJS5zjjDMzBgUFdhSiOGQlzKYCVyg03RS4QYjpsvjUSh3AcCilA4gB71byBe7nS22b/MbgmFGFBFamjnQG/yvuTZ9xuW0tQGXMCsZIvqVH+VXeVo8HsnxnWC6hEdhm5K7cxu1iNjGAsMUbCXoaFm5E36HzPdHNA="
+script:
+  - rake
+  - sonar-scanner

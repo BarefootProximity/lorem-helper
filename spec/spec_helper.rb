@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+require 'simplecov-json'
+SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter
+
+SimpleCov.start do
+  add_filter '/spec/'
+end
+
 require 'bundler/setup'
 require 'lorem_helper'
 
